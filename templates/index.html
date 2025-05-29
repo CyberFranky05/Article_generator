@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEO Dashboard Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            background: linear-gradient(120deg, #f8fafc 0%, #e9ecef 100%);
+            min-height: 100vh;
+        }
+        .dashboard-header {
+            background: #343a40;
+            color: #fff;
+            padding: 2.5rem 0 1.5rem 0;
+            border-radius: 0 0 1.5rem 1.5rem;
+            box-shadow: 0 4px 24px rgba(52,58,64,0.07);
+            margin-bottom: 2rem;
+        }
+        .dashboard-header h1 {
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .dashboard-header p {
+            color: #adb5bd;
+        }
+        .quick-links {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-top: 2.5rem;
+        }
+        .quick-link-card {
+            background: #fff;
+            border-radius: 1rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            padding: 2rem 2.5rem;
+            text-align: center;
+            transition: box-shadow 0.2s, transform 0.2s;
+            min-width: 220px;
+        }
+        .quick-link-card:hover {
+            box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+            transform: translateY(-4px) scale(1.03);
+        }
+        .quick-link-card i {
+            font-size: 2.5rem;
+            color: #0d6efd;
+            margin-bottom: 0.7rem;
+        }
+        .footer {
+            text-align: center;
+            color: #adb5bd;
+            margin-top: 3rem;
+            font-size: 0.95rem;
+        }
+        @media (max-width: 767px) {
+            .quick-links {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="/">SEO Dashboard</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="/search">Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/generate-template">Generate Template</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/generate-article">Generate Articles</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/generated-articles">Generated Articles</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+    <!-- Dashboard Header -->
+    <div class="dashboard-header text-center">
+        <h1>Welcome to the SEO Dashboard</h1>
+        <p class="lead">Your one-stop solution for SEO research, template generation, and article automation.</p>
+    </div>
+    <!-- Quick Links -->
+    <div class="container">
+        <div class="quick-links">
+            <a href="/search" class="quick-link-card text-decoration-none">
+                <i class="bi bi-search"></i>
+                <h5 class="mt-2 mb-1">Search</h5>
+                <div class="text-muted">Analyze top search results for your keywords.</div>
+            </a>
+            <a href="/generate-template" class="quick-link-card text-decoration-none">
+                <i class="bi bi-file-earmark-plus"></i>
+                <h5 class="mt-2 mb-1">Generate Template</h5>
+                <div class="text-muted">Create reusable article templates from real content.</div>
+            </a>
+            <a href="/generate-article" class="quick-link-card text-decoration-none">
+                <i class="bi bi-file-earmark-text"></i>
+                <h5 class="mt-2 mb-1">Generate Article</h5>
+                <div class="text-muted">Generate full HTML articles from your templates and data.</div>
+            </a>
+        </div>
+    </div>
+    <div class="footer">
+        &copy; 2025 SEO Dashboard &mdash; Powered by Flask & Bootstrap
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
